@@ -95,10 +95,32 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+/* .active::after {
+  content: '111';
+  width: 48px;
+  height: 4px;
+  color: var(--pressed-state-color);
+}
+
+.benefits-item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  top: 63px;
+  right: -44px;
+
+  display: block;
+  width: 1px;
+  height: 124px;
+  background-color: var(--light-cl-50);
+} */
+
 .social-links {
   display: flex;
   justify-content: center;
   gap: var(--indent-col);
+}
+.social-icon {
+  fill: var(--white-text-bg-color);
 }
 
 /* header */
@@ -133,7 +155,21 @@ img {
   display: flex;
   gap: 40px;
 }
-
+.header-nav-link.active {
+  position: relative;
+  color: var(--pressed-state-color);
+}
+.header-nav-link.active::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--pressed-state-color);
+}
 .header-nav-link {
   display: block;
   padding: 24px 0;
@@ -271,6 +307,9 @@ img {
   border-radius: 50%;
   background-color: var(--primary-brand-color);
 }
+.team-social-icon {
+  fill: var(--white-text-bg-color);
+}
 /*customers section*/
 .customers-list {
   display: flex;
@@ -285,6 +324,7 @@ img {
   border: 1px solid var(--ligth-text-color);
 }
 .customer-icon {
+  fill: var(--ligth-text-color);
   flex-shrink: 0;
 }
 /* footer */
